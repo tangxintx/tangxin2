@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>yyds</title>
+  </head>
+  <style>
+  
+  body{
+    background-color:rgb(51,51,51);
+    
+    }
+  .tou{
+    color:white;
+    font-size:45px;
+    text-align:center;
+    text-shadow:4px 4px 6px rgba(0,255,255,0.5);
+   
+    
+    }
+  .daohanglan{
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    text-shadow:4px 4px 6px rgba(0,255,255,0.5);
+    border-top:2px solid white;
+    border-left:2px solid white;
+    padding:5px 5px;
+    box-shadow:2px 2px 5px black;
+    }
+  .daohanglan div{
+    background-color:#b4b4b4;
+    padding:5px 15px;
+    }
+    .erwei{
+           
+    color: red        
+    }
+    </style>
+  
+ 
+  <body>
+  <div class="tou">工具</div>
+  <div class="daohanglan">
+  
+  <div>等开发</div>
+  </div>
+  <a href="https://tangxintx.github.io/tangxin/" style="position: absolute; top: 75px; left: 50px; color: mediumvioletred
+  ">主页</a>
+  
+  <div class="erwei">用微信也能扫出来</div>
+  
+  <meta charset="UTF-8">
+	<title>生成二维码</title>
+	
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+	<h1>生成二维码</h1>
+	<label for="url">请输入网址内容：</label>
+	<input type="text" id="url" name="url" placeholder="https://example.com">
+	<button onclick="generateQRCode()">生成二维码</button>
+	<div id="qrcode"></div>
+	<script>
+		// 生成二维码
+		function generateQRCode() {
+			var url = $('#url').val();
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+				text: url,
+				width: 180,
+				height: 180
+			});
+		}
+	
+  </script>
+  
+    </body>
+</html>
