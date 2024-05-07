@@ -1,101 +1,33 @@
- <!DOCTYPE html>
+<!-- 如需使用该源码可删除公告源码-->
+
+<!DOCTYPE html>
 <html>
-  <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>yyds</title>
-  </head>
-  <style>
-  
-  body{
-    background-color:rgb(51,51,51);
-    
-    }
-  .tou{
-    color:white;
-    font-size:45px;
-    text-align:center;
-    text-shadow:4px 4px 6px rgba(0,255,255,0.5);
-   
-    
-    }
-  .daohanglan{
-    color:white;
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
-    text-shadow:4px 4px 6px rgba(0,255,255,0.5);
-    border-top:2px solid white;
-    border-left:2px solid white;
-    padding:5px 5px;
-    box-shadow:2px 2px 5px black;
-    }
-  .daohanglan div{
-    background-color:#b4b4b4;
-    padding:5px 15px;
-    }
-    .erwei{
-           
-    color: red        
-    }
-    </style>
+ <head></head>
+ <body>
+  <meta charset="utf-8">
+  <title>极通云AI五子棋</title>
+  <meta name="viewport" content="width=500px, initial-scale=0.69，maximum-scale=1,user-scalable=0;">
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <h3 id="result-wrap" style="text-align:center!important;font-size: 30px;">--极通云AI五子棋--</h3>
+  <canvas id="chess" width="450px" height="450px"></canvas>
+  <div class="btn-wrap" style="text-align:center!important;">
+   <div id="restart" class="restart">
+    <span style="font-size: 30px;">重新开始</span>
+   </div>
+   <div id="goback" class="goback unable">
+    <span style="font-size: 30px;">悔棋</span>
+   </div>
+   <div id="return" class="return unable">
+    <span style="font-size: 30px;">撤销悔棋</span>
+   </div>
+  </div>
+  <script type="text/javascript" src="./main.js" charset="utf-8"></script>
   
  
-  <body>
-  <div class="tou">工具</div>
-  <div class="daohanglan">
+
+
   
-  <div>等开发</div>
-  </div>
-  <a href="https://tangxintx.github.io/tangxin/" style="position: absolute; top: 75px; left: 50px; color: mediumvioletred
-  ">主页</a>
   
-    <meta charset="UTF-8">
-	<title>生成二维码</title>
-	
-	
-	  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-</head>
-<body>
-  <h1>二维码生成器</h1>
-  <form id="qr-form">
-    <label for="url-input">输入网址:</label>
-    <input type="url" id="url-input" required>
-    <button type="submit">生成二维码</button>
-  </form>
-  <div id="qr-code"></div>
-  <script>
-    document.getElementById('qr-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const urlInput = document.getElementById('url-input');
-      const qrCodeElement = document.getElementById('qr-code');
-      const qr = qrcode(0, 'L');
-      qr.addData(urlInput.value);
-      qr.make();
-      qrCodeElement.innerHTML = qr.createImgTag();
-    });
-	
-	
-  </script>
-   
-  <h1>输入网页（注是网页）</h1>
-    <input type="text" id="url" placeholder="https://example.com">
-    <button onclick="fetchSource()">提取源码</button>
-    <pre id="sourceCode"></pre>
-    <script>
-        function fetchSource() {
-            const url = document.getElementById("url").value;
-            fetch(url)
-                .then(response => response.text())
-                .then(text => {
-                    const sourceCodeElement = document.getElementById("sourceCode");
-                    sourceCodeElement.textContent = text;
-                })
-                .catch(error => console.error(error));
-        }
-    </script>
-<a href="https://tangxintx.github.io/tangxin3/">计算器</a>
-<i>←←←用电脑版会好点</i>
- <a href="https://tangxintx.github.io/tangxin4/">今天吃什么（随机）</a>
- <a href="https://ora.ai/plastic-beige-176e/tangxingpt0124">ai</a>
-    </body>
+  
+ </body>
 </html>
